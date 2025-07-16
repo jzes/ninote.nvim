@@ -1,4 +1,4 @@
-![ninote](ninote1.png)
+![ninote](ninote3.png)
 
 # 📝 ninote.nvim
 
