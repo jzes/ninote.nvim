@@ -12,9 +12,9 @@ function ninote.setup(userConfig)
     ninote.config = vim.tbl_deep_extend("force", ninote.config, userConfig or {})
     -- registra os comandos
     --
-    vim.api.nvim_create_user_command("NewNote", require("ninote.note").New, {})
-    vim.api.nvim_create_user_command("CloseCurrentNote", require("ninote.note").Close, {})
-    vim.api.nvim_create_user_command("SearchInNotes", require("ninote.search").SearchInNotes, {})
+    vim.api.nvim_create_user_command("NinoteNew", require("ninote.note").New, {})
+    vim.api.nvim_create_user_command("NinoteClose", require("ninote.note").Close, {})
+    vim.api.nvim_create_user_command("NinoteSearch", require("ninote.search").SearchInNotes, {})
 end
 
 return ninote
