@@ -1,4 +1,4 @@
-![ninote](ninote3.png)
+![ninote](ninotelogo.png)
 
 # 📝 ninote.nvim
 
@@ -81,6 +81,10 @@ Configure em:
 - Integração com mais buscadores
 - Buscar por nome do arquivo
 - Permitir integração com lualine para indicador de nota aberta
+
+## 📼 Em Ação
+
+![ninote_em_acao](ninote.gif)
 
 ## ❤️ Créditos
 Desenvolvido por @jzes
