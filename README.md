@@ -28,7 +28,7 @@ Ele é simples, direto, mas extensível — ideal para rascunhos rápidos, regis
 
 ```lua
 {
-  "zehpaulo/ninote.nvim",
+  "jzes/ninote.nvim",
   config = function()
     require("ninote").setup({
       noteDir = "~/notas",         -- diretório onde as notas serão salvas
@@ -60,8 +60,8 @@ Suporte a engines:
 
 Configure em:
 
-SearchEngine = "fzf-lua",
-OpenSearch = "float", -- ou "buffer"
+- SearchEngine = "fzf-lua",
+- OpenSearch = "float", -- ou "buffer"
 
 ## 🧠 Exemplo de uso
 
