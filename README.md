@@ -3,6 +3,11 @@
 [![English](https://img.shields.io/badge/lang-en-blue)](./README.en.md)
 [![Português](https://img.shields.io/badge/lang-pt--BR-green)](./README.md)
 
+![Lua](https://img.shields.io/badge/Lua-5.1%20--%205.4-blue?logo=lua)
+![Neovim](https://img.shields.io/badge/Neovim-0.9%2B-57A143?logo=neovim)
+![Plugin](https://img.shields.io/badge/Plugin-Type--nvim-905)
+![License](https://img.shields.io/github/license/jzes/ninote.nvim)
+
 # 📝 ninote.nvim
 
 > Um plugin minimalista de notas para o Neovim, feito com carinho — inspirado por simplicidade e fluxo contínuo de escrita.
