@@ -1,6 +1,6 @@
 ![ninote](ninotelogo.png)
 
-[![English](https://img.shields.io/badge/lang-en-blue)](./README.en.md)
+[![English](https://img.shields.io/badge/lang-en-blue)](./README_en.md)
 [![Português](https://img.shields.io/badge/lang-pt--BR-green)](./README.md)
 
 ![Lua](https://img.shields.io/badge/Lua-5.1%20--%205.4-blue?logo=lua)
