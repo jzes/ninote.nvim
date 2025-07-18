@@ -39,7 +39,7 @@ Ele é simples, direto, mas extensível — ideal para rascunhos rápidos, regis
   "jzes/ninote.nvim",
   config = function()
     require("ninote").setup({
-      noteDir = "~/notas",         -- diretório onde as notas serão salvas
+      NoteDir = "~/notas",         -- diretório onde as notas serão salvas
       NewNoteHeader = "Nova nota", -- título padrão de cada nota
       SearchEngine = "fzf-lua",    -- futuramente "telescope"
       OpenSearch = "float"         -- "float" ou "buffer"
