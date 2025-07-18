@@ -34,7 +34,7 @@ It’s simple and focused, yet extensible — perfect for quick drafts, daily lo
   "jzes/ninote.nvim",
   config = function()
     require("ninote").setup({
-      noteDir = "~/notes",          -- directory where notes are stored
+      NoteDir = "~/notes",          -- directory where notes are stored
       NewNoteHeader = "New Note",  -- default title for new notes
       SearchEngine = "fzf-lua",    -- or "telescope" (in the future)
       OpenSearch = "float"         -- "float" or "buffer"
