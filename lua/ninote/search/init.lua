@@ -1,14 +1,14 @@
-local init = require("ninote")
-local fzfLuaSearchEngine = require("ninote.search.engines.fzflua")
-local searcher = {}
+local config = require("ninote.config")
+local fzf_lua_search_engine = require("ninote.search.engines.fzflua")
+local M = {}
 
-searcher.Engines = {}
-searcher.Engines[fzfLuaSearchEngine.ENGINE_NAME] = fzfLuaSearchEngine
+M.engines = {}
+M.engines[fzf_lua_search_engine.ENGINE_NAME] = fzf_lua_search_engine
 
-function searcher.SearchInNotes()
-    local searchEngineName = init.config.SearchEngine
-    local notesDir = vim.fn.expand(init.config.NoteDir)
-    searcher.Engines[searchEngineName].searchInNotes(notesDir)
+function M.search_in_notes()
+  local search_engine_name = config.get_config().search_engine
+  local notes_dir = vim.fn.expand(config.get_config().note_dir)
+  M.engines[search_engine_name].search_in_notes(notes_dir)
 end
 
-return searcher
+return M
