@@ -1,4 +1,4 @@
-![ninote](ninotelogo.png)
+![ninote](https://github.com/user-attachments/assets/c00ab8b8-82bf-4c0f-9337-4e7530e75ea1)
 
 [![English](https://img.shields.io/badge/lang-en-blue)](./README_en.md)
 [![Português](https://img.shields.io/badge/lang-pt--BR-green)](./README.md)
@@ -39,10 +39,10 @@ Ele é simples, direto, mas extensível — ideal para rascunhos rápidos, regis
   "jzes/ninote.nvim",
   config = function()
     require("ninote").setup({
-      NoteDir = "~/notas",         -- diretório onde as notas serão salvas
-      NewNoteHeader = "Nova nota", -- título padrão de cada nota
-      SearchEngine = "fzf-lua",    -- futuramente "telescope"
-      OpenSearch = "float"         -- "float" ou "buffer"
+      note_dir = "~/notas",         -- diretório onde as notas serão salvas
+      new_note_header = "Nova nota", -- título padrão de cada nota
+      search_engine = "fzf-lua",    -- futuramente "telescope"
+      open_search = "float"         -- "float" ou "buffer"
     })
   end,
   dependencies = {
@@ -54,11 +54,11 @@ Ele é simples, direto, mas extensível — ideal para rascunhos rápidos, regis
 
 ## 📋 Comandos disponíveis
 
-| Comando | Descrição|
-| --- | --- | 
-| :NinoteNew	| Abre (ou cria) a nota atual em modo flutuante |
-| :NinoteClose	| Arquiva a nota atual com nome automático ou custom |
-| :NinoteSearch	| Busca notas (conteúdo ou nome, com float/buffer) |
+| Comando        | Descrição                                          |
+| -------------- | -------------------------------------------------- |
+| :Ninote new    | Abre (ou cria) a nota atual em modo flutuante      |
+| :Ninote close  | Arquiva a nota atual com nome automático ou custom |
+| :Ninote search | Busca notas (conteúdo ou nome, com float/buffer)   |
 
 ## 🔍 Busca de notas
 
@@ -68,21 +68,21 @@ Suporte a engines:
 
 Configure em:
 
-- SearchEngine = "fzf-lua",
-- OpenSearch = "float", -- ou "buffer"
+- search_engine = "fzf-lua",
+- open_search = "float", -- ou "buffer"
 
 ## 🧠 Exemplo de uso
 
 -- Abrir nova nota
-:NinoteNew
+:Ninote new
 
 -- Escrever livremente, fechar com 'q' (salvando)
 
 -- Arquivar a nota (com nome customizado ou automático)
-:NinoteClose
+:Ninote close
 
 -- Buscar entre notas
-:NinoteSearch
+:Ninote search
 
 ## 📈 Roadmap (ideias futuras)
 
@@ -90,11 +90,8 @@ Configure em:
 - Buscar por nome do arquivo
 - Permitir integração com lualine para indicador de nota aberta
 
-## 📼 Em Ação
-
-![ninote_em_acao](ninote.gif)
-
 ## ❤️ Créditos
+
 Desenvolvido por @jzes
 
 Coautor espiritual e conselheiro técnico: ChatGPT
@@ -102,7 +99,5 @@ Coautor espiritual e conselheiro técnico: ChatGPT
 Nerd Font Icons, fzf-lua, telescope.nvim — comunidade Neovim 💚
 
 ## 🔖 Licença
+
 MIT — use, quebre, melhore e compartilhe.
-
-
-

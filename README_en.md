@@ -1,27 +1,32 @@
-![ninote](ninotelogo.png)
+![ninote](https://github.com/user-attachments/assets/c00ab8b8-82bf-4c0f-9337-4e7530e75ea1)
 
+[![English](https://img.shields.io/badge/lang-en-blue)](./README_en.md)
 [![Português](https://img.shields.io/badge/lang-pt--BR-green)](./README.md)
-[![English](https://img.shields.io/badge/lang-en-blue)](./README.en.md)
+
+![Lua](https://img.shields.io/badge/Lua-5.1%20--%205.4-blue?logo=lua)
+![Neovim](https://img.shields.io/badge/Neovim-0.9%2B-57A143?logo=neovim)
+![Plugin](https://img.shields.io/badge/Plugin-Type--nvim-905)
+![License](https://img.shields.io/github/license/jzes/ninote.nvim)
 
 # 📝 ninote.nvim
 
-> A minimalist note plugin for Neovim, made with care — inspired by simplicity and uninterrupted writing flow.
+> A minimalist note-taking plugin for Neovim, crafted with care — inspired by simplicity and a continuous writing flow.
 
 ---
 
 ## ✨ Overview
 
-`ninote.nvim` is a note-taking plugin designed to quickly open a floating note window, allowing distraction-free editing and archiving with either automatic or custom filenames.
+`ninote.nvim` is a note-taking plugin designed to quickly open a floating note, let you write without distractions, and archive your notes with automatic or custom names.
 
-It’s simple and focused, yet extensible — perfect for quick drafts, daily logs, or ideas that come while coding.
+It’s simple, straightforward, yet extensible — ideal for quick drafts, daily logs, or ideas while coding.
 
 ---
 
-## 📦 Key Features
+## 📦 Main Features
 
-- 🔐 Open a **current note** in a floating window
-- 🧘‍♂️ Distraction-free experience: write and close with `q` (it auto-saves)
-- 📁 Archive the note with an automatic or custom name (`:NinoteClose`)
+- 🔐 Open the **current note** in a floating window
+- 🧘‍♂️ Distraction-free experience: write and close with `q` (auto-save)
+- 📁 Archive notes with automatic or custom names (`NinoteClose`)
 - 🔍 Search notes:
   - by content (using `fzf-lua` or `telescope`)
 
@@ -34,10 +39,10 @@ It’s simple and focused, yet extensible — perfect for quick drafts, daily lo
   "jzes/ninote.nvim",
   config = function()
     require("ninote").setup({
-      NoteDir = "~/notes",          -- directory where notes are stored
-      NewNoteHeader = "New Note",  -- default title for new notes
-      SearchEngine = "fzf-lua",    -- or "telescope" (in the future)
-      OpenSearch = "float"         -- "float" or "buffer"
+      note_dir = "~/notes",          -- directory where notes are stored
+      new_note_header = "New note",  -- default note title
+      search_engine = "fzf-lua",     -- future: "telescope"
+      open_search = "float"          -- "float" or "buffer"
     })
   end,
   dependencies = {
@@ -51,61 +56,59 @@ It’s simple and focused, yet extensible — perfect for quick drafts, daily lo
 
 ## 📋 Available Commands
 
-| Command          | Description                                                 |
-|------------------|-------------------------------------------------------------|
-| `:NinoteNew`     | Open (or create) the current note in a floating window      |
-| `:NinoteClose`   | Archive the current note with a custom or automatic name    |
-| `:NinoteSearch`  | Search notes (by content or filename, using float/buffer)   |
+| Command        | Description                                          |
+| -------------- | ---------------------------------------------------- |
+| :Ninote new    | Open (or create) the current note in a floating view |
+| :Ninote close  | Archive the current note with auto/custom name       |
+| :Ninote search | Search notes (content or name, float/buffer)         |
 
 ---
 
-## 🔍 Note Searching
+## 🔍 Note Search
 
 Supported engines:
 
-- `fzf-lua` (recommended)
+- fzf-lua (recommended)
 
-Configure in your setup:
+Configuration:
 
-- `SearchEngine = "fzf-lua"`
-- `OpenSearch = "float"` — or `"buffer"`
+- `search_engine = "fzf-lua"`
+- `open_search = "float"` -- or `"buffer"`
 
 ---
 
 ## 🧠 Usage Example
 
 ```vim
-:NinoteNew      " Open a new note
-" write normally, then press 'q' to save and close
+" Open a new note
+:Ninote new
 
-:NinoteClose    " Archive the note (custom or auto name)
+" Write freely, then press 'q' to close (auto-save)
 
-:NinoteSearch   " Search your notes
+" Archive the note (custom or automatic name)
+:Ninote close
+
+" Search through notes
+:Ninote search
 ```
 
 ---
 
-## 📈 Roadmap (upcoming ideas)
+## 📈 Roadmap (future ideas)
 
-- Support for more search backends
-- Search by filename
-- lualine integration (show indicator if note is open)
-
----
-
-## 📼 In Action
-
-![ninote_in_action](ninote.gif)
+- Integration with more search engines
+- Search by file name
+- Integration with lualine for active note indicator
 
 ---
 
 ## ❤️ Credits
 
-Created by [@jzes](https://github.com/jzes)
+Developed by @jzes
 
 Spiritual co-author and technical advisor: ChatGPT
 
-Thanks to the Neovim community 💚 — fzf-lua, telescope.nvim, Nerd Font Icons
+Nerd Font Icons, fzf-lua, telescope.nvim — Neovim community 💚
 
 ---
 
