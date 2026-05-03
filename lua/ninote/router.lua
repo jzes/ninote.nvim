@@ -1,9 +1,9 @@
 local M = {}
 
 local routes = {
-  new = require("ninote.note").new,
-  close = require("ninote.note").close,
-  search = require("ninote.search").search_in_notes,
+  new = require("ninote.usecase.create_note").new,
+  close = require("ninote.usecase.close_note").close,
+  search = require("ninote.usecase.search_note").search_in_notes,
 }
 function M.route(args)
   local cmd_raw = args.fargs[1]
